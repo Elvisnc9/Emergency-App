@@ -6,6 +6,7 @@ import 'package:public_emergency_app/Features/User/Screens/FirefighterOptions/fi
 import 'package:public_emergency_app/Features/User/Screens/HospitalOptions/hospital_options.dart';
 import 'package:public_emergency_app/Features/User/Screens/PoliceOptions/police_options.dart';
 
+// ignore: must_be_immutable
 class GridDashboard extends StatelessWidget {
   Items item1 = Items(
       title: "Police",

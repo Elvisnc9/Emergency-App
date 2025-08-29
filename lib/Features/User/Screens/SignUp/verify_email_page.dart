@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:public_emergency_app/Features/Ambulance/ambulance_dashboard.dart';
 import 'package:public_emergency_app/Features/FireFighter/firefighter_dashboard.dart';
 import 'package:public_emergency_app/Features/Police/police_dashboard.dart';
+// ignore: unused_import
 import 'package:public_emergency_app/Features/User/Screens/DashBoard/user_dashboard.dart';
 import '../../../../User.dart';
 import '../../../Login/login_screen.dart';
@@ -30,7 +31,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
     var ref =
         FirebaseDatabase.instance.ref().child('Users').child(firebaseUser!.uid);
     final snapshot = await ref.get(); // you should use await on async methods
-    if (snapshot!.value != null) {
+    if (snapshot.value != null) {
       var userCurrentInfo = AppUser.fromSnapshot(snapshot);
       setState(() {
         userType = userCurrentInfo.userType;
@@ -134,9 +135,9 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
                     children: [
                       Container(
                         margin: const EdgeInsets.only(top: 8),
-                        child: Column(
+                        child: const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children:  [
                             Text(
                               "Verify Email",
                               style: TextStyle(

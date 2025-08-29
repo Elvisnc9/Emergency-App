@@ -30,13 +30,11 @@ class _UserProfileState extends State<UserProfile> {
               ElevatedButton(
 
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(200, 50),
+                  foregroundColor: Colors.white, minimumSize:  const Size(200, 50), backgroundColor: Colors.red,
                   shape: RoundedRectangleBorder(
 
                     borderRadius: BorderRadius.circular(32.0),
                   ),
-                  primary: Colors.red, // background
-                  onPrimary: Colors.white,
                   // foreground
                 ),
                   onPressed: () {
@@ -52,34 +50,30 @@ class _UserProfileState extends State<UserProfile> {
               const SizedBox(height: 20,),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    minimumSize: Size(200, 50),
+                    foregroundColor: Colors.white, minimumSize: const Size(200, 50), backgroundColor: Colors.green,
                     shape: RoundedRectangleBorder(
 
                       borderRadius: BorderRadius.circular(32.0),
                     ),
-                    primary: Colors.green, // background
-                    onPrimary: Colors.white,
                     // foreground
                   ),
                   onPressed: () {
-                      Get.to(() => add_contact());
+                      Get.to(() => const add_contact());
                   },
                   child:const Text("Add Emergency Contacts")),
               const SizedBox(height: 20,),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    minimumSize: Size(200, 50),
+                    foregroundColor: Colors.white, minimumSize: const Size(200, 50), backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
 
                       borderRadius: BorderRadius.circular(32.0),
                     ),
-                    primary: Colors.blue, // background
-                    onPrimary: Colors.white,
                     // foreground
                   ),
                   onPressed: () {
 
-                      Get.to(() => ContactListScreen());
+                      Get.to(() => const ContactListScreen());
                   },
                   child:const Text("Emergency Contacts")),
 

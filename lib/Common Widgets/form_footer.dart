@@ -21,7 +21,7 @@ class FooterWidget extends StatelessWidget {
           const SizedBox(height: 20),
           TextButton(
             style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: const BorderSide(color: Colors.transparent)))),
@@ -35,7 +35,7 @@ class FooterWidget extends StatelessWidget {
             child: Text.rich(
               TextSpan(
                   text: Texts,
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.labelMedium,
                   children: [
                     TextSpan(
                         text: Title,

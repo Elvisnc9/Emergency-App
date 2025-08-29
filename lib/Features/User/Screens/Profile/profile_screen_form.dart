@@ -20,7 +20,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final _formkey = GlobalKey<FormState>();
+    final formkey = GlobalKey<FormState>();
     String userEmail;
     final user =FirebaseAuth.instance.currentUser;
 
@@ -39,7 +39,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
               userEmail=map["email"].toString();
 
               return Form(
-                key: _formkey,
+                key: formkey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -63,6 +63,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
                         }
                         // Return null if the entered username is valid
                         // return null;
+                        return null;
                       },
 
                       decoration: InputDecoration(
@@ -86,6 +87,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
                           return 'Invalid phone number';
                         }
                         // return null;
+                        return null;
                       },
                       decoration: InputDecoration(
                         prefixIcon: const Icon(Icons.phone),
@@ -99,7 +101,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
                     TextFormField(
                       initialValue: map['email'],
                       enableInteractiveSelection: false,
-                      focusNode: new AlwaysDisabledFocusNode(),
+                      focusNode:  AlwaysDisabledFocusNode(),
                       validator: (value) {
                         bool _isEmailValid = RegExp(
                             r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
@@ -107,6 +109,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
                         if (!_isEmailValid) {
                           return 'Invalid email.';
                         }
+                        return null ;
                         // return null;
                       },
                       decoration: InputDecoration(
@@ -139,7 +142,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
 
 
 
-                          if ((_formkey.currentState)!.validate()) {
+                          if ((formkey.currentState)!.validate()) {
                             updateprofile(nameController.text.trim(),
                                 phoneController.text.trim());
 

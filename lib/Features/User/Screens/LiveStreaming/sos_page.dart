@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -59,9 +61,9 @@ class _LiveStreamUserState extends State<LiveStreamUser> {
                   ),
                   Container(
                     margin: const EdgeInsets.only(top: 8),
-                    child: Column(
+                    child: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           "SOS",
                           style: TextStyle(
@@ -129,10 +131,10 @@ class _LiveStreamUserState extends State<LiveStreamUser> {
         ref.set({
           "time": "${DateTime.now().hour}:${DateTime.now().minute} ${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}",
           "address": address,
-          "email": user?.email.toString(),
+          "email": user.email.toString(),
           "lat": position.latitude.toString(),
           "long": position.longitude.toString(),
-          "videoId": user!.uid.toString(),
+          "videoId": user.uid.toString(),
         });
       });
     });

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:public_emergency_app/Features/User/Screens/Profile/profile_screen.dart';
+// import 'package:public_emergency_app/Features/User/Screens/Profile/profile_screen.dart';
 import 'package:public_emergency_app/Features/User/Screens/bottom_nav.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -42,18 +42,18 @@ class _add_contactState extends State<add_contact> {
 
   //Controllers
   final contactController = Get.put(EmergencyContactsController());
-  var _formKey = GlobalKey<FormState>();
+  // final _formKey = GlobalKey<FormState>();
   var contact1controller = TextEditingController(text: Text(_contact1).data.toString());
   var contact2controller = TextEditingController(text: Text(_contact2).data.toString());
   var contact3controller = TextEditingController(text: Text(_contact3).data.toString());
   var contact4controller = TextEditingController(text: Text(_contact4).data.toString());
   var contact5controller = TextEditingController(text: Text(_contact5).data.toString());
 
-  static const String _key1 = 'contact1';
-  static const String _key2 = 'contact2';
-  static const String _key3 = 'contact3';
-  static const String _key4 = 'contact4';
-  static const String _key5 = 'contact5';
+  // static const String _key1 = 'contact1';
+  // static const String _key2 = 'contact2';
+  // static const String _key3 = 'contact3';
+  // static const String _key4 = 'contact4';
+  // static const String _key5 = 'contact5';
 
 
   @override
@@ -69,7 +69,7 @@ class _add_contactState extends State<add_contact> {
           ),
         ),
         bottom: PreferredSize(
-            preferredSize: Size.fromHeight(100),
+            preferredSize: const Size.fromHeight(100),
             child: Container(
               padding: const EdgeInsets.only(bottom: 15),
               child: Column(
@@ -79,15 +79,15 @@ class _add_contactState extends State<add_contact> {
                     children: [
                       Center(
                         child: SizedBox.fromSize(
-                          size: Size(56, 56),
+                          size: const Size(56, 56),
                           child: ClipOval(
                             child: Material(
                               color: Colors.lightBlueAccent,
                               child: InkWell(
                                 splashColor: Colors.white,
-                                onTap: () {  Get.to(() => NavBar());
+                                onTap: () {  Get.to(() => const NavBar());
                                 },
-                                child: Column(
+                                child: const Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
                                     Icon(Icons.arrow_back, color: Colors.white, size: 30,),
@@ -109,9 +109,9 @@ class _add_contactState extends State<add_contact> {
                   ),
                   Container(
                     margin: const EdgeInsets.only(top: 8),
-                    child: Column(
+                    child: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           "Emergency Contacts",
                           style: TextStyle(
@@ -236,7 +236,7 @@ class _add_contactState extends State<add_contact> {
                         backgroundColor: Colors.blue,
                         // foreground
                       ),
-                      child: Text("Save"),
+                      child: const Text("Save"),
                       onPressed: () async {
                         var contact1 = contact1controller.text.toString();
                         var contact2 = contact2controller.text.toString();

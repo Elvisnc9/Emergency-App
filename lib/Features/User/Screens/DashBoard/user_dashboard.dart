@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:public_emergency_app/Features/User/Controllers/message_sending.dart';
 import 'package:public_emergency_app/Features/User/Screens/DashBoard/grid_dash.dart';
 
-import '../../Controllers/session_controller.dart';
+// import '../../Controllers/session_controller.dart';
 // import 'login_screen.dart';
 
 class UserDashboard extends StatefulWidget {
@@ -42,7 +42,7 @@ class _UserDashboardState extends State<UserDashboard> {
           ),
         ),
         bottom: PreferredSize(
-            preferredSize: Size.fromHeight(100),
+            preferredSize: const Size.fromHeight(100),
             child: Container(
               padding: const EdgeInsets.only(bottom: 15),
               child: Column(
@@ -58,9 +58,9 @@ class _UserDashboardState extends State<UserDashboard> {
                   ),
                   Container(
                     margin: const EdgeInsets.only(top: 8),
-                    child: Column(
+                    child: const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           "Dashboard",
                           style: TextStyle(
