@@ -43,16 +43,19 @@ dependencies:
   google_fonts: ^4.0.3
   curved_navigation_bar: ^1.0.3
   url_launcher: ^6.1.10
-  permission_handler: ^10.2.0
+  permission_handler: 
   android_intent_plus: ^3.1.6
   geolocator: ^9.0.2
   geocoding: ^2.1.0
   flutter_sms: ^2.3.3
   shared_preferences: ^2.0.20
-  zego_uikit_prebuilt_live_streaming: ^2.3.6
+  zego_uikit_prebuilt_live_streaming: 
   background_sms: ^0.0.4
   google_maps_flutter: ^2.2.5
   sliding_switch: ^1.1.0
+  wakelock_plus:
+  file_picker: ^8.0.0   # latest as of 2025
+
 
 
 dev_dependencies:

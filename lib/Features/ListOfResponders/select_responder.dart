@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, prefer_typing_uninitialized_variables, prefer_const_constructors, unused_local_variable
+
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -7,7 +9,6 @@ import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:math';
 import '../Response Screen/emergencies_screen.dart';
-import '../User/Screens/LiveStreaming/live_stream.dart';
 
 class SelectResponder extends StatefulWidget {
   final userID;
@@ -15,7 +16,7 @@ class SelectResponder extends StatefulWidget {
   final userLong;
   final userAddress;
   final userPhone;
-   SelectResponder({Key? key, this.userID, this.userLat, this.userLong, this.userAddress, this.userPhone}
+  const SelectResponder({Key? key, this.userID, this.userLat, this.userLong, this.userAddress, this.userPhone}
       ) : super(key: key);
 
   @override
@@ -67,7 +68,7 @@ class _SelectResponderState extends State<SelectResponder> {
                           },
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
+                            children: const<Widget>[
                               Icon(Icons.arrow_back, color: Colors.white, size: 30,),
                             ],
                           ),

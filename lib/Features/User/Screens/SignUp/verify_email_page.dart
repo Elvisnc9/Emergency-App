@@ -27,12 +27,12 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
   bool canResendEmail = true;
   Widget Screen= const NavBar();
   Future<String> getUserType() async {
-    var firebaseUser = FirebaseAuth.instance.currentUser;
-    var ref =
+    final firebaseUser = FirebaseAuth.instance.currentUser;
+    final ref =
         FirebaseDatabase.instance.ref().child('Users').child(firebaseUser!.uid);
     final snapshot = await ref.get(); // you should use await on async methods
     if (snapshot.value != null) {
-      var userCurrentInfo = AppUser.fromSnapshot(snapshot);
+      final userCurrentInfo = AppUser.fromSnapshot(snapshot);
       setState(() {
         userType = userCurrentInfo.userType;
         debugPrint("User Type: $userType");

@@ -145,12 +145,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         // Firebase.initializeApp().then((value) => Get.put(AuthenticationRepository()));
                         if (user != null) {
                           SessionController().userid = user.uid.toString();
-                          Timer(Duration(seconds: 3),
-                              () => Get.offAll(() => VerifyEmailPage()));
+                          Timer(const Duration(seconds: 3),
+                              () => Get.offAll(() => const VerifyEmailPage()));
                         } else {
                           // print("hello");
-                          Timer(Duration(seconds: 3),
-                              () => Get.offAll(() => LoginScreen()));
+                          Timer(const Duration(seconds: 3),
+                              () => Get.offAll(() => const LoginScreen()));
                         }
 
                         // Navigator.push(

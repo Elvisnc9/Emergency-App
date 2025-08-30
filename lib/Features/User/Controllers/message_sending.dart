@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, unused_local_variable
+
 import 'dart:io';
 
 import 'package:background_sms/background_sms.dart';
@@ -19,7 +21,7 @@ class messageController extends GetxController {
   Position? _currentPosition;
   void _sendSMS(String message, List<String> recipents) async {
     for (var i = 0; i < recipents.length; i++) {
-      String _result = await BackgroundSms.sendMessage(
+      String _result =  BackgroundSms.sendMessage(
               //add all phone numbers in phone number list
               phoneNumber: recipents[i].toString(),
               message: message)
